@@ -1,0 +1,5 @@
+{
+  "language_id": "js",
+  "path": ".",
+  "scripts": ["server.py"]
+}

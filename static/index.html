@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasher</title>
+    <link
+      href="https://cdn.tailwindcdn.com/1.1.4/tailwind.min.css"
+      type="text/css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
+      type="text/css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      html,
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .anim {
+        transition-duration: 500ms;
+      }
+    </style>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="h-screen w-screen bg-gray-900 flex items-center justify-center">
+      <div class="bg-white rounded-lg shadow-2xl p-8">
+        <h1 class="text-3xl font-black">
+          Hasher
+        </h1>
+        <form class="flex my-4" id="hashform">
+          <input
+            placeholder="Enter text to hash"
+            id="textinp"
+            class="shadow-md appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-xl hover:shadow-xl transition anim"
+          />
+          <button
+            type="submit"
+            id="sub"
+            class="bg-gray-900 text-white text-center items-center flex justify-center px-4 shadow-lg"
+          >
+            →
+          </button>
+        </form>
+        <div id="hashes">
+          <h3 class="text-gray-900 font-bold">MD5:</h3>
+          <h3 class="text-gray-900 font-bold">SHA1:</h3>
+          <h3 class="text-gray-900 font-bold">SHA256:</h3>
+          <h3 class="text-gray-900 font-bold">SHA512:</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
