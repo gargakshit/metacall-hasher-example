@@ -36,7 +36,15 @@
           const inp = document.getElementById("textinp").value;
 
           if (inp) {
-            fetch(`${baseUrl}/getHash?text=${encodeURI(inp)}`)
+            fetch(`${baseUrl}/getHash`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                text: inp,
+              }),
+            })
               .then((res) => res.json())
               .then(({ hashes }) => {
                 document.getElementById("hashes").innerHTML = `
