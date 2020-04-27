@@ -1,5 +1,5 @@
 {
   "language_id": "file",
   "path": ".",
-  "scripts": ["index.html"]
+  "scripts": ["index.html", "tailwind.min.css"]
 }
