@@ -1,14 +1,8 @@
-const express = require("express");
 const crypto = require("crypto");
+const fs = require("fs");
+const path = require("path");
 
-const app = express();
-app.use(express.json());
-
-app.use(express.static("static"));
-
-app.get("/getHash", (req, res) => {
-  const { text } = req.query;
-
+function getHash(text) {
   const hashes = {
     md5: crypto.createHash("md5").update(text).digest("hex"),
     sha1: crypto.createHash("sha1").update(text).digest("hex"),
@@ -16,7 +10,9 @@ app.get("/getHash", (req, res) => {
     sha512: crypto.createHash("sha512").update(text).digest("hex"),
   };
 
-  res.json({ hashes });
-});
+  return { hashes };
+}
 
-app.listen(3000, () => console.log("Server ready on :3000"));
+function index() {
+  return fs.readFileSync(path.join(__dirname, "./static/index.html"));
+}

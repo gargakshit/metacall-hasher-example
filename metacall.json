@@ -1,5 +1,5 @@
 {
   "language_id": "js",
   "path": ".",
-  "scripts": ["server.py"]
+  "scripts": ["metacall.js"]
 }
