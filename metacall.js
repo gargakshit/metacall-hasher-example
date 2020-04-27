@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
 const crypto = require("crypto");
-const fs = require("fs");
-const path = require("path");
 
 /**
  * Function getHash
@@ -21,8 +19,6 @@ function getHash(text) {
 }
 
 /**
- * Serve the index file
+ * Export the functions
  */
-function index() {
-  return fs.readFileSync(path.join(__dirname, "./static/index.html"));
-}
+module.exports = { getHash };
