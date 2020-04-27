@@ -1,5 +1,5 @@
 {
-  "language_id": "js",
+  "language_id": "node",
   "path": ".",
   "scripts": ["metacall.js"]
 }

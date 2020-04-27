@@ -1,7 +1,14 @@
+#!/usr/bin/env node
+
 const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
+/**
+ * Function getHash
+ * Returns hashes of the param text
+ * @param {String} text
+ */
 function getHash(text) {
   const hashes = {
     md5: crypto.createHash("md5").update(text).digest("hex"),
@@ -13,6 +20,9 @@ function getHash(text) {
   return { hashes };
 }
 
+/**
+ * Serve the index file
+ */
 function index() {
   return fs.readFileSync(path.join(__dirname, "./static/index.html"));
 }
